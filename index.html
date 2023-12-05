@@ -82,7 +82,7 @@
 
 
 <a href="https://github.com/atonkamanda" title="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-
+<a href="https://www.linkedin.com/in/aton-kamanda-97388a160" title="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
 <a href="https://twitter.com/AtonKamanda" title="Twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
 
 
@@ -201,14 +201,13 @@
     
 
     <div class="clearfix">
-      <p>I’m a research master’s student at the <a href="https://www.umontreal.ca/" target="_blank" rel="noopener noreferrer">University of Montreal</a> under the supervision of
- <a href="https://scholar.google.com/citations?user=xsUkTCEAAAAJ&amp;hl=fr" target="_blank" rel="noopener noreferrer">Prof. Houari Sahraoui</a>, currently working on <a href="https://en.wikipedia.org/wiki/Energy_based_model" target="_blank" rel="noopener noreferrer">energy-based models</a>.</p>
+      <p>I recently completed my master’s degree at <a href="https://mila.quebec/en/" target="_blank" rel="noopener noreferrer">Mila</a> and am currently enrolled in various research projects.</p>
 
-<p>My main research goal is to investigate how the process of inference, both in biological brains and artificial intelligence systems, gives rise to complex hierarchical beliefs about the world. By gaining insights into this process, my aim is to advance the development of more sophisticated intelligent machines and deepen our understanding of brain functions.</p>
+<p>My current goal is to advance my expertise in applied deep learning, with a specific emphasis on large-scale deployment. The engineering complexities involved in handling large neural networks like ChatGPT or DALL-E, both during training for knowledge acquisition and during inference to cater to millions of global users, demand a sophisticated skill set. I believe that the ability to implement cutting-edge deep learning research at scale will play a pivotal role in the forthcoming technological revolution and that is what I am focusing on currently.</p>
 
-<p>Although this is my main long-term research goal, I am very interested in all fields related to this idea, especially deep learning, reinforcement learning, robotics, brain-computer interface, and computational neuroscience. During my master’s degree at the University of Montreal I took all my courses  at <a href="https://mila.quebec/en/" target="_blank" rel="noopener noreferrer">Mila</a> and became teacher assistant for Mila’s <a href="https://neo-x.github.io/teaching/" target="_blank" rel="noopener noreferrer">robot learning class</a> , meanwhile I’ve received a <a href="https://en.wikipedia.org/wiki/Natural_Sciences_and_Engineering_Research_Council" target="_blank" rel="noopener noreferrer">NSERC</a> grant to research and develop new methods in deep learning.</p>
+<p>While my current focus is on large-scale deployment, I have a keen interest in applying deep learning across various domains. Specifically, I am knowledgable of deep reinforcement learning, robotics, brain-computer interfaces, and computational neuroscience. During my master’s degree I served as a teaching assistant for Mila’s <a href="https://neo-x.github.io/teaching/" target="_blank" rel="noopener noreferrer">robot learning class</a>, meanwhile I’ve received a <a href="https://en.wikipedia.org/wiki/Natural_Sciences_and_Engineering_Research_Council" target="_blank" rel="noopener noreferrer">NSERC</a> grant to research and develop new methods in deep learning and have been able to contribute to multiple research projects related to deep learning.</p>
 
-<p>Below I detail  the research directions I am considering working on in the future. Please feel free to <a href="mailto:atonkamanda@hotmail.com">contact me</a> if you are interested in collaborating.</p>
+<p>Please feel free to <a href="mailto:atonkamanda@hotmail.com">contact me</a> if you are interested in collaborating.</p>
 
     </div>
 
@@ -222,29 +221,53 @@ body {
 
     <font size="+0">
   <h1>
-<strong>Research</strong> directions</h1>
+<strong>About</strong> AI</h1>
 
 
 
-  <p><strong>Using latent variable models to build machines with common sense and a complex set of beliefs.</strong></p>
+  <p><strong>The advantage of digital intelligence over biological intelligence.</strong></p>
    <ul style="list-style: disc;">
-  <li> Humans and animals learn most of their basic knowledge about how the world works in their childhood. A good example of this is the perception that the world is three-dimensional. The brain has no direct access to the 3D structure of
-    any perceived object. In contrast, it receives low-level 2D sensory information from the retina and 3D is the best way for our brain to explain how our view of the
-    world changes from our left eye to our right eye, or when our head is being moved. This phenomenon is known as <a href="https://en.wikipedia.org/wiki/Unconscious_inference" target="_blank" rel="noopener noreferrer">unconscious inference</a>, is fundamental to cognition and is well captured by latent variable models such as VAE or energy-based models.</li>
 
 
+  <li> One significant distinction between digital intelligence and biological intelligence is that biological neural networks weights are physical, 
+    the hardware is tied to the software, that is humans and animals are <a href="https://www.youtube.com/watch?v=sghvwkXV3VU&amp;ab_channel=VectorInstitute" target="_blank" rel="noopener noreferrer">mortal computers</a>.
+    This distinction underscores the unique advantage of digital intelligence in its ability to run identical weights on diverse physical substrates, 
+    providing interesting properties unattainable by biological counterparts </li>
+
+  <br>
+
+
+  <li> This property is very important since it means that all individual copies of the model can share the same weights allowing them to communicate what they have learned from their 
+   individual training data by sharing gradients. Current <a href="https://openai.com/research/techniques-for-training-large-neural-networks" target="_blank" rel="noopener noreferrer">large neural networks 
+    leverage this property via parrallelism</a> to process vast amount of data and acquire tremendous amount of knowledge
+   , that is how something like GPT-4 is able to read "everything that is on internet" something that no human today is able to do.</li>
 
   <br>
 
-  <li> An important corollary of that is the fact that we don't directly perceive the world around us rather our brains are inference engines whose function is to infer the probable causes of sensory inputs. Those probable causes can be high dimensional, are learned by optimization, and are analogous to beliefs about the world being modeled, they are the system's best guesses on the latent variables which explain the data.  </li>
+
+  <li> Container orchestration tools such as <a href="https://kubernetes.io/further" target="_blank" rel="noopener noreferrer">Kubernetes</a> enhance this hardware independence, enabling the rapid deployment of neural networks on diverse hardware platforms and fostering communication between instances on how to operate.
+    Soon, these expansive neural networks will evolve to be multimodal, interacting with the physical world and achieving a superior level of understanding in various domains compared to ChatGPT, simply because they can process a much larger volume 
+    of data and identify patterns that elude human perception. 
+  </li>
+ 
+   <br>
+
+
+   <li> Illustratively, consider an artificial neural network radiologist who has analyzed tens of thousands of patients, compared to a human counterpart who has encountered only a few thousand.
+    The artificial neural network radiologist will attains a significantly higher level of understanding and efficiency. This mirrors the paradigm of AlphaGo excelling as the premier Go player through extensive gameplay, surpassing what any human could achieve in a single lifetime.
+  </li>
 
   <br>
-  
-
-  <li>I share <a href="https://openreview.net/pdf?id=BZ5a1r-kVsf" target="_blank" rel="noopener noreferrer">Yann Lecun's view </a> that common sense can be seen as a hierarchical model of the world that can tell an agent what is likely, what is plausible, and what is impossible about high dimensional representations, and would emerge given that the agent has sufficiently good data, inductive biases, and optimization process. Energy-based models have a lot of properties that make them a perfect candidate for this.</li>
 
 
-  
+  <li> A common myth is that current artificial neural networks are more statistically inefficient than humans, This misconception often arises from unfair comparisons, such as pitting the learning abilities of a university undergrad against a blank neural network, 
+    without accounting for the wealth of prior knowledge humans possess. Recent studies, conducting a <a href="https://openreview.net/pdf?id=W23ZTdsabj" target="_blank" rel="noopener noreferrer">more rigorous comparison</a>, and the demonstrated ability of recent models in few-shot learning refute this myth, 
+    showcasing that artificial neural networks are just as statistically efficient as humans.  </li>
+  <br>
+
+
+ 
+
 
 
 
@@ -252,22 +275,25 @@ body {
 </ul>
 
 
-<p><strong>Using deep learning to build mechanistic models of cognition.</strong></p>
+<p><strong>About a theory of intelligence and cognition.</strong></p>
 
 <ul style="list-style: disc;">
+
+
+    
   <li>
-<a href="https://en.wikipedia.org/wiki/Free_energy_principle" target="_blank" rel="noopener noreferrer">The free energy principle </a> is the most convincing and successful theory of cognition, it is very powerful in that it doesn't only try to explain what cognition is, it explains the mathematical rules that any agent doted with cognition should follow in any possible world. If we assume that it is right then the brain can be viewed as a particular solution nature found to implement approximate bayesian inference in biological organisms and AI research can be viewed as finding the best ways to implement it into machines. </li>
+<a href="https://en.wikipedia.org/wiki/Free_energy_principle" target="_blank" rel="noopener noreferrer">The free energy principle </a> is currently the most convincing theory of cognition, it is very powerful in that it doesn't only try to explain what cognition is, it explains the mathematical rules that any agent doted with cognition should follow in any possible world. The brain can be viewed as a particular solution nature found to implement approximate bayesian inference in biological organisms and AI research can be viewed as finding the best ways to implement it into machines which what Solomonoff's <a href="https://raysolomonoff.com/publications/alp-theory-and-applications.pdf" target="_blank" rel="noopener noreferrer">algorithmic probability theory</a> is about. </li>
 
   <br>
 
-  <li> Under this account it is not surprising that deep learning models <a href="https://www.nature.com/articles/s41593-019-0520-2" target="_blank" rel="noopener noreferrer">are becoming the best tools to model the neuronal response and behavior of some parts of the brain</a>, and that they develop similar features to those of humans and animals when trained on the same task such as <a href="https://distill.pub/2020/circuits/early-vision/" target="_blank" rel="noopener noreferrer">gabor filters</a>. With enough optimization and architectural similarity to bias the hypotheses space they discover the same best explanations for the data. It gets
-    physically instantiate in the neural activation vectors of brains and machines and make the apperance of things like <a href="https://en.wikipedia.org/wiki/Grandmother_cell" target="_blank" rel="noopener noreferrer">grandmother cells</a> obvious. </li>
-  <br>
 
   <li>A lot of complex mental phenomena previously thought to be mysterious make a lot more sense under this paradigm, such as <a href="https://arxiv.org/abs/2009.01791" target="_blank" rel="noopener noreferrer">perception and action</a>, <a href="https://grazianolab.princeton.edu/sites/g/files/toruqf3411/files/graziano/files/jcs_graziano_2016.pdf" target="_blank" rel="noopener noreferrer">consciousness</a>, its <a href="https://arxiv.org/pdf/2302.06403.pdf" target="_blank" rel="noopener noreferrer">ineffability</a>, <a href="https://openreview.net/pdf?id=BZ5a1r-kVsf" target="_blank" rel="noopener noreferrer">emotions</a>, and <a href="https://arxiv.org/pdf/2008.07408.pdf" target="_blank" rel="noopener noreferrer">selfhood</a>, or mental disorders such as <a href="https://www.nature.com/articles/nrn2536" target="_blank" rel="noopener noreferrer">schizophrenia</a>, <a href="https://www.quentinhuys.com/pub/HuysEa14-VulnerabilityAddictionDopamine.pdf" target="_blank" rel="noopener noreferrer">addiction</a>, and maybe even <a href="https://www.deepmind.com/blog/dopamine-and-temporal-difference-learning-a-fruitful-relationship-between-neuroscience-and-ai" target="_blank" rel="noopener noreferrer">depression</a>. </li>
   <br>
 
-  <li>What I explain above also mean that what is left for AI and neuroscience is not to find new theories about what cognition and intelligence are but rather find how precisely those computations are implemented in the brain and how we can implement them into machines. It is therefore becoming more and more relevant to study artificial agents with tools inspired by psychology and neuroscience to probe their set of beliefs about the world and how they evolve with learning, for example recently a lot of benchmarks have appeared based on the violation of expectation paradigm to <a href="https://www.nature.com/articles/s41562-022-01394-8" target="_blank" rel="noopener noreferrer">test for the model understanding of intuitive physics</a>, on a more mechanistic ground <a href="https://distill.pub/2020/circuits/" target="_blank" rel="noopener noreferrer">circuits</a> use a broad set of tools to gain insight into the computations performed by a single neural network, I think this type of works are going in the right direction. </li>
+
+  <li> These theoritcal works among other lead me to think that we have a decent understanding  of the principles underlying cognition and intelligence is. The current focus appears to be shifting towards the engineering aspects, specifically addressing the practicalities of constructing these systems.</li>
+  <br>
+
 
 
 </ul>
@@ -301,7 +327,7 @@ body {
     
     
     
-    Last updated: April 03, 2023.
+    Last updated: December 05, 2023.
     
   </div>
 </footer>
