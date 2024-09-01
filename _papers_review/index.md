@@ -11,13 +11,11 @@ profile:
     
 
 news: true  # It is the idea list display
-selected_papers: false # includes a list of papers marked as "selected={true}"
+selected_papers: True # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
-I recently completed my master's degree at <a href="https://mila.quebec/en/">Mila</a> and am currently enrolled in various research projects.
- 
+I am currently working as a ML engineer at <a href="https://www.awakeai.ca/AwakeAI">AwakeAI</a> where I'm building a real-time video understanding model based on  <a href="https://ai.meta.com/blog/v-jepa-yann-lecun-ai-model-video-joint-embedding-predictive-architecture/">JEPAs</a> (Joint Embedding Predictive Architectures). Previously, after graduating from <a href="https://mila.quebec/en/">Mila</a> I've worked in various research projects focused on improving LLMs for coding tasks.
 
-My current goal is to advance my expertise in machine learning engineering. I believe that the ability to apply cutting-edge deep learning research will play a pivotal role in the forthcoming technological revolution and that is what I am focusing on currently.
-
+My current goal is to apply deep learning to solve meaningful problems while increasing my expertise. I believe that the ability to implement cutting-edge deep learning research will play a pivotal role in the forthcoming technological revolution.
 
 Feel free to [contact me](mailto:atonkamanda@hotmail.com) if you are interested in collaborating.

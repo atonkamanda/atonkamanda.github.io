@@ -12,9 +12,9 @@ body {
   <ul style="list-style: disc;">
 
 
- <li> My primary strength lies in my profound and extensive comprehension of the literature in deep learning. Ranging from low level optimization of neural networks computations to theoretical machine learning passing by reinforcement learning, bayesian probabilities or computational neuroscience.
-    I can quickly gain an in-depth understanding of any paper from top machine learning conferences (<a href="https://nips.cc/">NIPS</a>/<a href="https://iclr.cc/">ICLR</a>/<a href="https://icml.cc/">ICML</a>) and be able to reproduce it or implement it efficiently 
-    in production which I think is a very rare and valuable skill.</li>
+
+  <li>My primary strength lies in translating cutting-edge deep learning research into practical, high-performance solutions. Through my previous experience with state-of-the-art models, I've navigated the challenges of transitioning from research to production. This has given me the ability to quickly grasp complex papers from top machine learning conferences and efficiently implement them in real-world environments.</li>
+</ul>
 
  <br>
 
@@ -24,39 +24,20 @@ body {
 </ul>
 
 
-  <h1><strong>What I </strong> believe</h1>
-
-  <p><strong>The advantage of digital intelligence over biological intelligence.</strong></p>
+ <p><strong>Building Neural Networks</strong></p>
    <ul style="list-style: disc;">
-
-
-  <li> One significant distinction between digital intelligence and biological intelligence is that biological neural networks weights are physical, 
-    the hardware is tied to the software, that is humans and animals are <a href="https://www.youtube.com/watch?v=sghvwkXV3VU&ab_channel=VectorInstitute">mortal computers</a>.
-    This distinction underscores the unique advantage of digital intelligence in its ability to run identical weights on diverse physical substrates, 
-    providing interesting properties unattainable by biological counterparts </li>
-
+  <li>Artificial neural networks are digital, allowing all copies of a model to share weights across diverse physical substrates and communicate learned information via different parts of the data through gradient sharing. This property enables <a href="https://openai.com/research/techniques-for-training-large-neural-networks">large neural networks to leverage parallelism</a>, processing vast amounts of data and acquiring knowledge at a scale unattainable by humans. This is exemplified by Large Language Models' (LLMs) ability to process almost all the content on the internet, or by AlphaGo's mastery of Go through extensive gameplay beyond what any human could achieve in a lifetime. These capabilities make the ability to leverage large amounts of compute and data crucial skills for producing systems with superhuman abilities.</li>
   <br>
-
-
-  <li> This property is very important since it means that all individual copies of the model can share the same weights allowing them to communicate what they have learned from their 
-   individual training data by sharing gradients. Current <a href="https://openai.com/research/techniques-for-training-large-neural-networks">large neural networks 
-    leverage this property via parallelism</a> to process vast amount of data and acquire tremendous amount of knowledge
-   , that is how something like GPT-4 is able to read "everything that is on internet" something that no human today is able to do.</li>
-
+  <li><a href="https://nonint.com/2023/06/10/the-it-in-ai-models-is-the-dataset/">"The 'it' is in the dataset"</a>;  given sufficient weights and training time, models trained on the same dataset tend to converge to similar representations. This implies that model behavior is primarily determined by the dataset and the loss function, while factors like architecture, hyperparameters, or optimizer are mainly involved in delivering the compute necessary to reach those representations efficiently.</li>
   <br>
-
-
-   <li> Illustratively, consider an artificial neural network radiologist who has analyzed tens of thousands of patients, compared to a human counterpart who has encountered only a few thousand.
-    The artificial neural network radiologist will attains a significantly higher level of understanding and efficiency. This mirrors the paradigm of AlphaGo excelling as the premier Go player through extensive gameplay, surpassing what any human could achieve in a single lifetime.
-  </li>
-
+  <li>The most effective way to improve a model's performance on a task is by developing an intuition about how the model interacts with the data. There are unique subtleties in the training dynamics that can only be learned through consistent training and evaluation. For example, <a href="https://arxiv.org/abs/2304.03843">LLMs learn reasoning only if the dataset exhibits certain properties</a>, regardless of the architecture, and they <a href="https://arxiv.org/abs/2405.17399">struggle with arithmetic without proper embeddings</a>. Understanding these nuances is crucial for optimizing the learning process as a whole.</li>
   <br>
-
-
-  <li> A common myth is that current artificial neural networks are more statistically inefficient than humans, This misconception often arises from unfair comparisons, such as pitting the learning abilities of a university undergrad against a blank neural network, 
-    without accounting for the wealth of prior knowledge humans possess. Recent studies, conducting a <a href="https://openreview.net/pdf?id=W23ZTdsabj">more rigorous comparison</a>, and the demonstrated ability of recent models in few-shot learning refute this myth, 
-    showcasing that artificial neural networks are just as statistically efficient as humans.  </li>
+  <li>A concrete example that exemplifies this principle is the <a href="https://arxiv.org/abs/1812.03982">SlowFast Networks for Video Recognition</a> paper. The authors leverage a property of the data distribution in videos: spatial semantic features (the content of the video) evolve more slowly than temporal dynamic features (e.g., the actions being performed). To build a model that learns the task more efficiently, one needs to consider the properties of both the data and the model jointly, designing architectures that align with the inherent structure of the data.</li> 
   <br>
+</ul>
+
+</ul>
+
 
 
  
@@ -74,7 +55,7 @@ body {
 
 
     
-  <li><a href="https://en.wikipedia.org/wiki/Free_energy_principle">The free energy principle </a> is currently the most convincing theory of cognition, it is very powerful in that it doesn't only try to explain what cognition is, it explains the mathematical rules that any agent doted with cognition should follow in any possible world. The brain can be viewed as a particular solution nature found to implement approximate bayesian inference in biological organisms and AI research can be viewed as finding the best ways to implement it into machines which what Solomonoff's <a href="https://raysolomonoff.com/publications/alp-theory-and-applications.pdf">algorithmic probability theory</a> is about. </li>
+  <li><a href="https://en.wikipedia.org/wiki/Free_energy_principle">The free energy principle </a> is currently the most convincing theory of cognition, it is very powerful in that it doesn't only try to explain what cognition is, it explains the mathematical rules that any agent doted with cognition should follow. The brain can be viewed as a particular solution nature found to implement approximate bayesian inference in biological organisms and AI research can be viewed as finding the best ways to implement it into machines with computational restraints which what Solomonoff's <a href="https://raysolomonoff.com/publications/alp-theory-and-applications.pdf">algorithmic probability theory</a> is about. </li>
 
   <br>
 
@@ -83,10 +64,6 @@ body {
   <br>
 
 
-  <li> These theoretical works among other lead me to think that we have a decent understanding  of the principles underlying cognition and intelligence. The current focus appears to be shifting towards the engineering aspects, specifically addressing the practicalities of constructing these systems.
-    We are in a situation similar to understanding the principles of electromagnetism and the nature of a photon but still needing to figure out how to build a laser.
-  </li>
-  <br>
 
 
 
