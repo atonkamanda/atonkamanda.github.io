@@ -84,7 +84,7 @@ keep_files:
   - .nojekyll
   - .git
 plugins:
-  - jekyll/scholar
+  - jekyll-scholar
   - jekyll-diagrams
   - jekyll-email-protect
   - jekyll-feed
@@ -95,6 +95,7 @@ plugins:
   - jekyll-twitter-plugin
   - jemoji
   - jekyll-redirect-from
+
 whitelist:
   - jekyll-redirect-from
 github:
