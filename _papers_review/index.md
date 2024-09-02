@@ -11,7 +11,7 @@ profile:
     
 
 news: true  # It is the idea list display
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
 I am currently working as a ML engineer at <a href="https://www.awakeai.ca/about">AwakeAI</a> where I'm building a real-time video understanding model based on  <a href="https://ai.meta.com/blog/v-jepa-yann-lecun-ai-model-video-joint-embedding-predictive-architecture/">JEPAs</a> (Joint Embedding Predictive Architectures). Previously, after graduating from <a href="https://mila.quebec/en/">Mila</a> I've worked in various research projects focused on improving LLMs for coding tasks.
