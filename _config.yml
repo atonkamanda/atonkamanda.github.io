@@ -36,8 +36,8 @@ contact_note: >
   you.
 google_analytics: G-PNC2E7EEG4
 panelbear_analytics: XXXXXXXXX
-blog_name: Papers review
-blog_description: 'Blog articles about neuroscience, deep learning and reinforcement learning.'
+blog_name: Technical ML
+blog_description: 'Personal insights about Machine learning'
 permalink: '/blog/:year/:title/'
 pagination:
   enabled: true
