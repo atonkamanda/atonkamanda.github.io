@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aton Kamanda</title>
+  <meta name="description" content="Aton Kamanda — research engineer at LawZero, working on AI safety and Scientist AI.">
+  <meta property="og:title" content="Aton Kamanda">
+  <meta property="og:description" content="Research engineer at LawZero, working on AI safety.">
+  <meta property="og:url" content="https://atonkamanda.github.io/">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%231c1b19'/></svg>">
+  <style>
+    :root {
+      --bg: #faf9f6;
+      --fg: #1c1b19;
+      --muted: #6b6862;
+      --rule: #e4e1da;
+      --serif: "Iowan Old Style", "Charter", "Palatino Linotype", Palatino, Georgia, serif;
+      --sans: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #141412; --fg: #ebe8e1; --muted: #9a968e; --rule: #2c2b28; }
+    }
+    * { box-sizing: border-box; margin: 0; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font: 400 1.125rem/1.7 var(--serif);
+      min-height: 100vh;
+      display: flex;
+      -webkit-font-smoothing: antialiased;
+    }
+    main {
+      width: 100%;
+      max-width: 36rem;
+      margin: auto;
+      padding: 18vh 1.75rem 4rem;
+      animation: fade .9s ease-out both;
+    }
+    h1 {
+      font-weight: 400;
+      font-size: clamp(2.25rem, 6vw, 3rem);
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+    .role {
+      font-family: var(--sans);
+      font-size: .8rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 1rem 0 2.75rem;
+    }
+    p + p { margin-top: 1.25rem; }
+    a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--rule); transition: border-color .2s; }
+    a:hover { border-color: var(--fg); }
+    nav {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem 1.75rem;
+      font-family: var(--sans);
+      font-size: .9rem;
+    }
+    nav a { color: var(--muted); border: 0; }
+    nav a:hover { color: var(--fg); }
+    @keyframes fade { from { opacity: 0; transform: translateY(6px); } }
+    @media (prefers-reduced-motion: reduce) { main { animation: none; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Aton Kamanda</h1>
+    <p class="role">Research engineer · LawZero · Montréal</p>
+
+    <p>
+      I work on AI safety at <a href="https://lawzero.org">LawZero</a>, the nonprofit founded by
+      Yoshua Bengio, where we are building <em>Scientist&nbsp;AI</em>: a non-agentic system that aims to
+      understand and explain the world rather than act in it, so that it can serve as a trustworthy
+      guardrail for more autonomous AI.
+    </p>
+    <p>
+      Before that, I spent my time turning research into working systems: LLM agents for legal
+      translation at Alexa Translations, and real-time video understanding at AwakeAI, a
+      Mila-incubated startup. I studied artificial intelligence at Mila and the Université de
+      Montréal, and computer science at the University of Namur.
+    </p>
+
+    <nav>
+      <a href="mailto:atonkamanda@hotmail.com">Email</a>
+      <a href="https://github.com/atonkamanda">GitHub</a>
+      <a href="https://x.com/AtonKamanda">X</a>
+      <a href="https://www.linkedin.com/in/aton-kamanda-97388a160">LinkedIn</a>
+      <a href="cv.pdf">CV</a>
+    </nav>
+  </main>
+</body>
+</html>
