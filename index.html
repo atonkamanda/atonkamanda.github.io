@@ -8,122 +8,199 @@
   <meta property="og:title" content="Aton Kamanda">
   <meta property="og:description" content="Research engineer at LawZero, working on AI safety.">
   <meta property="og:url" content="https://atonkamanda.github.io/">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%231c1b19'/></svg>">
+  <meta name="theme-color" content="#f7f5f0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121211" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%231a1917'/></svg>">
+  <link rel="preload" href="fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin>
   <style>
+    @font-face {
+      font-family: "Newsreader";
+      src: url(fonts/newsreader.woff2) format("woff2");
+      font-weight: 300 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Newsreader";
+      src: url(fonts/newsreader-italic.woff2) format("woff2");
+      font-weight: 300 500;
+      font-style: italic;
+      font-display: swap;
+    }
     :root {
-      --bg: #faf9f6;
-      --fg: #1c1b19;
-      --muted: #6b6862;
-      --rule: #e4e1da;
-      --serif: "Iowan Old Style", "Charter", "Palatino Linotype", Palatino, Georgia, serif;
+      --bg: #f7f5f0;
+      --fg: #1a1917;
+      --muted: #77736b;
+      --rule: #dfdbd2;
+      --accent: #8c3a28;
+      --serif: "Newsreader", "Iowan Old Style", Charter, Georgia, serif;
       --sans: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
+      color-scheme: light dark;
     }
     @media (prefers-color-scheme: dark) {
-      :root { --bg: #141412; --fg: #ebe8e1; --muted: #9a968e; --rule: #2c2b28; }
+      :root { --bg: #121211; --fg: #e9e5dc; --muted: #8f8b83; --rule: #2a2926; --accent: #e0a48e; }
     }
     * { box-sizing: border-box; margin: 0; }
-    html { -webkit-text-size-adjust: 100%; }
+    html { -webkit-text-size-adjust: 100%; interpolate-size: allow-keywords; }
     body {
       background: var(--bg);
       color: var(--fg);
-      font: 400 1.125rem/1.7 var(--serif);
-      min-height: 100vh;
-      display: flex;
+      font: 350 1.1875rem/1.68 var(--serif);
+      font-optical-sizing: auto;
       -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
+    ::selection { background: var(--accent); color: var(--bg); }
     main {
-      width: 100%;
-      max-width: 36rem;
-      margin: auto;
-      padding: 18vh 1.75rem 4rem;
-      animation: fade .9s ease-out both;
+      max-width: 35rem;
+      margin: 0 auto;
+      padding: clamp(5rem, 20vh, 11rem) 1.75rem 5rem;
     }
+    main > * { animation: rise 1s cubic-bezier(.2, .7, .2, 1) both; }
+    main > :nth-child(2) { animation-delay: .12s; }
+    main > :nth-child(3) { animation-delay: .24s; }
+    main > :nth-child(4) { animation-delay: .36s; }
+    main > :nth-child(5) { animation-delay: .48s; }
+
     h1 {
-      font-weight: 400;
-      font-size: clamp(2.25rem, 6vw, 3rem);
-      letter-spacing: -0.02em;
-      line-height: 1.1;
+      font-weight: 300;
+      font-size: clamp(2.9rem, 9vw, 4rem);
+      letter-spacing: -0.03em;
+      line-height: 1;
     }
-    .role {
-      font-family: var(--sans);
-      font-size: .8rem;
-      letter-spacing: .12em;
+    h1::after {
+      content: "";
+      display: block;
+      width: 2.25rem;
+      height: 1px;
+      background: var(--accent);
+      margin: 2.25rem 0 2.5rem;
+    }
+    .bio p + p { margin-top: 1.2rem; }
+    .bio em { font-style: italic; }
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+      text-decoration-color: var(--rule);
+      text-decoration-thickness: 1px;
+      text-underline-offset: .22em;
+      transition: color .25s, text-decoration-color .25s;
+    }
+    a:hover { color: var(--accent); text-decoration-color: currentColor; }
+
+    .label {
+      font: 500 .72rem/1 var(--sans);
+      letter-spacing: .16em;
       text-transform: uppercase;
       color: var(--muted);
-      margin: 1rem 0 2.75rem;
     }
-    p + p { margin-top: 1.25rem; }
-    a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--rule); transition: border-color .2s; }
-    a:hover { border-color: var(--fg); }
-    h2 {
-      font: 400 .8rem/1 var(--sans);
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin: 3.5rem 0 1.5rem;
+
+    details { margin-top: 3.75rem; border-top: 1px solid var(--rule); }
+    summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.4rem 0;
+      user-select: none;
     }
-    ol { list-style: none; padding: 0; }
-    li + li { margin-top: 1.5rem; }
-    .title { line-height: 1.45; }
+    summary::-webkit-details-marker { display: none; }
+    summary .count { color: var(--muted); opacity: .6; margin-left: .6em; transition: opacity .25s; }
+    summary:hover .label, details[open] .label { color: var(--fg); }
+    summary:hover .count { opacity: 1; }
+    .toggle { position: relative; width: .7rem; height: .7rem; color: var(--muted); }
+    .toggle::before, .toggle::after {
+      content: "";
+      position: absolute;
+      inset: 50% 0 auto;
+      height: 1px;
+      background: currentColor;
+      transition: transform .4s cubic-bezier(.2, .7, .2, 1);
+    }
+    .toggle::after { transform: rotate(90deg); }
+    details[open] .toggle::after { transform: rotate(0); }
+    summary:focus-visible { outline: 1px solid var(--accent); outline-offset: 4px; }
+
+    details::details-content {
+      block-size: 0;
+      overflow: hidden;
+      transition: block-size .5s cubic-bezier(.2, .7, .2, 1), content-visibility .5s allow-discrete;
+    }
+    details[open]::details-content { block-size: auto; }
+
+    ol { list-style: none; padding: 0 0 1.25rem; }
+    li + li { margin-top: 1.6rem; }
+    .title { font-size: 1.125rem; line-height: 1.4; }
+    .title a { text-decoration-color: transparent; }
+    .title a:hover { text-decoration-color: currentColor; }
     .meta {
       font-family: var(--sans);
-      font-size: .82rem;
+      font-size: .8rem;
       line-height: 1.6;
       color: var(--muted);
-      margin-top: .35rem;
+      margin-top: .4rem;
     }
-    .meta b { font-weight: 400; color: var(--fg); }
-    .meta a { border: 0; text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 3px; }
-    .meta a:hover { color: var(--fg); text-decoration-color: currentColor; }
+    .meta b { font-weight: 500; color: var(--fg); }
+    .venue { display: block; margin-top: .15rem; }
+    .meta a { text-decoration-color: var(--rule); }
+
     nav {
-      margin-top: 3rem;
-      padding-top: 1.5rem;
       border-top: 1px solid var(--rule);
+      padding-top: 1.75rem;
       display: flex;
       flex-wrap: wrap;
-      gap: .5rem 1.75rem;
+      gap: .6rem 1.9rem;
       font-family: var(--sans);
-      font-size: .9rem;
+      font-size: .875rem;
     }
-    nav a { color: var(--muted); border: 0; }
-    nav a:hover { color: var(--fg); }
-    @keyframes fade { from { opacity: 0; transform: translateY(6px); } }
-    @media (prefers-reduced-motion: reduce) { main { animation: none; } }
+    nav a { color: var(--muted); text-decoration: none; }
+    nav a:hover { color: var(--accent); }
+
+    @keyframes rise { from { opacity: 0; transform: translateY(8px); } }
+    @media (prefers-reduced-motion: reduce) {
+      main > * { animation: none; }
+      details::details-content, .toggle::after { transition: none; }
+    }
   </style>
 </head>
 <body>
   <main>
     <h1>Aton Kamanda</h1>
-    <p class="role">Research engineer · LawZero · Montréal</p>
 
-    <p>
-      I work on AI safety at <a href="https://lawzero.org">LawZero</a>, the nonprofit founded by
-      Yoshua Bengio, where we are building <em>Scientist&nbsp;AI</em>: a non-agentic system that aims to
-      understand and explain the world rather than act in it, so that it can serve as a trustworthy
-      guardrail for more autonomous AI.
-    </p>
-    <p>
-      Before that, I spent my time turning research into working systems: LLM agents for legal
-      translation at Alexa Translations, and real-time video understanding at AwakeAI, a
-      Mila-incubated startup. I studied artificial intelligence at Mila and the Université de
-      Montréal, and computer science at the University of Namur.
-    </p>
+    <div class="bio">
+      <p>
+        I work on AI safety at <a href="https://lawzero.org">LawZero</a>, the nonprofit founded by
+        Yoshua Bengio, where we are building <em>Scientist&nbsp;AI</em>: a non-agentic system that aims to
+        understand and explain the world rather than act in it, so that it can serve as a trustworthy
+        guardrail for more autonomous AI.
+      </p>
+      <p>
+        Before that, I spent my time turning research into working systems: LLM agents for legal
+        translation at Alexa Translations, and real-time video understanding at AwakeAI, a
+        Mila-incubated startup. I studied artificial intelligence at Mila and the Université de
+        Montréal, and computer science at the University of Namur.
+      </p>
+    </div>
 
-    <h2>Publications</h2>
-    <ol>
-      <li>
-        <div class="title"><a href="https://arxiv.org/abs/2606.29657">Safety from Honesty in a Disinterested AI Predictor</a></div>
-        <div class="meta">Y. Bengio, O. Richardson, T. Gavenčiak, M. Cohen, …, <b>A. Kamanda</b>, A. Oberman, …, J. Ghosn<br>arXiv preprint, 2026</div>
-      </li>
-      <li>
-        <div class="title"><a href="https://arxiv.org/abs/2605.08496">Latent Personality Alignment: Improving Harmlessness Without Mentioning Harms</a></div>
-        <div class="meta">L. Le, D. Williams-King, M. A. Merzouk, <b>A. Kamanda</b>, A. Oberman<br>ICLR 2026 Workshop · <a href="https://openreview.net/attachment?id=edIAABRLWE&amp;name=pdf">OpenReview</a></div>
-      </li>
-      <li>
-        <div class="title"><a href="https://arxiv.org/abs/2403.09032">CodeUltraFeedback: An LLM-as-a-Judge Dataset for Aligning LLMs to Coding Preferences</a></div>
-        <div class="meta">M. Weyssow, <b>A. Kamanda</b>, X. Zhou, H. Sahraoui<br>ACM, 2026 · <a href="https://dl.acm.org/doi/full/10.1145/3736407">ACM</a></div>
-      </li>
-    </ol>
+    <details>
+      <summary><span class="label">Publications<span class="count">3</span></span><span class="toggle" aria-hidden="true"></span></summary>
+      <ol>
+        <li>
+          <div class="title"><a href="https://arxiv.org/abs/2606.29657">Safety from Honesty in a Disinterested AI Predictor</a></div>
+          <div class="meta">Y. Bengio, O. Richardson, T. Gavenčiak, M. Cohen, …, <b>A. Kamanda</b>, A. Oberman, …, J. Ghosn<span class="venue">arXiv preprint, 2026</span></div>
+        </li>
+        <li>
+          <div class="title"><a href="https://arxiv.org/abs/2605.08496">Latent Personality Alignment: Improving Harmlessness Without Mentioning Harms</a></div>
+          <div class="meta">L. Le, D. Williams-King, M. A. Merzouk, <b>A. Kamanda</b>, A. Oberman<span class="venue">ICLR 2026 Workshop · <a href="https://openreview.net/attachment?id=edIAABRLWE&amp;name=pdf">OpenReview</a></span></div>
+        </li>
+        <li>
+          <div class="title"><a href="https://arxiv.org/abs/2403.09032">CodeUltraFeedback: An LLM-as-a-Judge Dataset for Aligning LLMs to Coding Preferences</a></div>
+          <div class="meta">M. Weyssow, <b>A. Kamanda</b>, X. Zhou, H. Sahraoui<span class="venue">ACM, 2026 · <a href="https://dl.acm.org/doi/full/10.1145/3736407">ACM</a></span></div>
+        </li>
+      </ol>
+    </details>
 
     <nav>
       <a href="mailto:atonkamanda@hotmail.com">Email</a>
