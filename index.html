@@ -8,207 +8,64 @@
   <meta property="og:title" content="Aton Kamanda">
   <meta property="og:description" content="Research engineer at LawZero, working on AI safety.">
   <meta property="og:url" content="https://atonkamanda.github.io/">
-  <meta name="theme-color" content="#f7f5f0" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#121211" media="(prefers-color-scheme: dark)">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%231a1917'/></svg>">
-  <link rel="preload" href="fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%231a1a1a'/></svg>">
   <style>
-    @font-face {
-      font-family: "Newsreader";
-      src: url(fonts/newsreader.woff2) format("woff2");
-      font-weight: 300 500;
-      font-style: normal;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: "Newsreader";
-      src: url(fonts/newsreader-italic.woff2) format("woff2");
-      font-weight: 300 500;
-      font-style: italic;
-      font-display: swap;
-    }
-    :root {
-      --bg: #f7f5f0;
-      --fg: #1a1917;
-      --muted: #77736b;
-      --rule: #dfdbd2;
-      --accent: #8c3a28;
-      --serif: "Newsreader", "Iowan Old Style", Charter, Georgia, serif;
-      --sans: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
-      color-scheme: light dark;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root { --bg: #121211; --fg: #e9e5dc; --muted: #8f8b83; --rule: #2a2926; --accent: #e0a48e; }
-    }
+    /* The classic researcher homepage: white page, book serif, blue links. */
     * { box-sizing: border-box; margin: 0; }
-    html { -webkit-text-size-adjust: 100%; interpolate-size: allow-keywords; }
-    body {
-      background: var(--bg);
-      color: var(--fg);
-      font: 350 1.1875rem/1.68 var(--serif);
-      font-optical-sizing: auto;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-    }
-    ::selection { background: var(--accent); color: var(--bg); }
-    main {
-      max-width: 35rem;
-      margin: 0 auto;
-      padding: clamp(5rem, 20vh, 11rem) 1.75rem 5rem;
-    }
-    main > * { animation: rise 1s cubic-bezier(.2, .7, .2, 1) both; }
-    main > :nth-child(2) { animation-delay: .12s; }
-    main > :nth-child(3) { animation-delay: .24s; }
-    main > :nth-child(4) { animation-delay: .36s; }
-    main > :nth-child(5) { animation-delay: .48s; }
+    html { interpolate-size: allow-keywords; -webkit-text-size-adjust: 100%; }
+    body { background: #fff; color: #1a1a1a; font: 400 18px/1.6 Charter, "Bitstream Charter", "Iowan Old Style", Georgia, serif; -webkit-font-smoothing: antialiased; }
+    main { max-width: 640px; margin: 0 auto; padding: 72px 24px 80px; }
+    h1 { font-size: 30px; font-weight: 400; }
+    .contact { margin-top: 4px; font-size: 16px; color: #666; }
+    a { color: #1a55b5; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .bio { margin-top: 28px; }
+    .bio p + p { margin-top: 14px; }
+    h2 { font-size: 18px; font-weight: 700; margin: 36px 0 10px; }
 
-    h1 {
-      font-weight: 300;
-      font-size: clamp(2.9rem, 9vw, 4rem);
-      letter-spacing: -0.03em;
-      line-height: 1;
-    }
-    h1::after {
-      content: "";
-      display: block;
-      width: 2.25rem;
-      height: 1px;
-      background: var(--accent);
-      margin: 2.25rem 0 2.5rem;
-    }
-    .bio p + p { margin-top: 1.2rem; }
-    .bio em { font-style: italic; }
+    details.pubs summary { list-style: none; cursor: pointer; user-select: none; display: flex; align-items: center; gap: 10px; font-weight: 700; margin-top: 36px; }
+    details.pubs summary::-webkit-details-marker { display: none; }
+    details.pubs summary i { position: relative; width: 9px; height: 9px; color: #999; }
+    details.pubs summary i::before, details.pubs summary i::after { content: ""; position: absolute; inset: 50% 0 auto; height: 1px; background: currentColor; transition: transform .45s cubic-bezier(.2,.7,.2,1); }
+    details.pubs summary i::after { transform: rotate(90deg); }
+    details.pubs[open] summary i::after { transform: rotate(0); }
+    details.pubs::details-content { block-size: 0; overflow: hidden; transition: block-size .6s cubic-bezier(.2,.7,.2,1), content-visibility .6s allow-discrete; }
+    details.pubs[open]::details-content { block-size: auto; }
+    details.pubs ol { list-style: none; padding: 0; }
+    details.pubs li { margin-top: 12px; font-size: 17px; }
+    details.pubs .meta { font-size: 15px; color: #666; }
+    details.pubs .meta b { font-weight: 500; color: #1a1a1a; }
 
-    a {
-      color: inherit;
-      text-decoration: underline;
-      text-decoration-color: var(--rule);
-      text-decoration-thickness: 1px;
-      text-underline-offset: .22em;
-      transition: color .25s, text-decoration-color .25s;
-    }
-    a:hover { color: var(--accent); text-decoration-color: currentColor; }
-
-    .label {
-      font: 500 .72rem/1 var(--sans);
-      letter-spacing: .16em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    details { margin-top: 3.75rem; border-top: 1px solid var(--rule); }
-    summary {
-      list-style: none;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1.4rem 0;
-      user-select: none;
-    }
-    summary::-webkit-details-marker { display: none; }
-    summary .count { color: var(--muted); opacity: .6; margin-left: .6em; transition: opacity .25s; }
-    summary:hover .label, details[open] .label { color: var(--fg); }
-    summary:hover .count { opacity: 1; }
-    .toggle { position: relative; width: .7rem; height: .7rem; color: var(--muted); }
-    .toggle::before, .toggle::after {
-      content: "";
-      position: absolute;
-      inset: 50% 0 auto;
-      height: 1px;
-      background: currentColor;
-      transition: transform .4s cubic-bezier(.2, .7, .2, 1);
-    }
-    .toggle::after { transform: rotate(90deg); }
-    details[open] .toggle::after { transform: rotate(0); }
-    summary:focus-visible { outline: 1px solid var(--accent); outline-offset: 4px; }
-
-    details::details-content {
-      block-size: 0;
-      overflow: hidden;
-      transition: block-size .5s cubic-bezier(.2, .7, .2, 1), content-visibility .5s allow-discrete;
-    }
-    details[open]::details-content { block-size: auto; }
-
-    ol { list-style: none; padding: 0 0 1.25rem; }
-    li + li { margin-top: 1.6rem; }
-    .title { font-size: 1.125rem; line-height: 1.4; }
-    .title a { text-decoration-color: transparent; }
-    .title a:hover { text-decoration-color: currentColor; }
-    .meta {
-      font-family: var(--sans);
-      font-size: .8rem;
-      line-height: 1.6;
-      color: var(--muted);
-      margin-top: .4rem;
-    }
-    .meta b { font-weight: 500; color: var(--fg); }
-    .venue { display: block; margin-top: .15rem; }
-    .meta a { text-decoration-color: var(--rule); }
-
-    nav {
-      border-top: 1px solid var(--rule);
-      padding-top: 1.75rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: .6rem 1.9rem;
-      font-family: var(--sans);
-      font-size: .875rem;
-    }
-    nav a { color: var(--muted); text-decoration: none; }
-    nav a:hover { color: var(--accent); }
-
-    @keyframes rise { from { opacity: 0; transform: translateY(8px); } }
-    @media (prefers-reduced-motion: reduce) {
-      main > * { animation: none; }
-      details::details-content, .toggle::after { transition: none; }
-    }
+    nav.links { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 16px; }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; } }
   </style>
 </head>
 <body>
-  <main>
-    <h1>Aton Kamanda</h1>
+<main>
+  <h1>Aton Kamanda</h1>
+  <div class="contact">Research engineer, LawZero · Montréal</div>
 
-    <div class="bio">
-      <p>
-        I work on AI safety at <a href="https://lawzero.org">LawZero</a>, the nonprofit founded by
-        Yoshua Bengio, where we are building <em>Scientist&nbsp;AI</em>: a non-agentic system that aims to
-        understand and explain the world rather than act in it, so that it can serve as a trustworthy
-        guardrail for more autonomous AI.
-      </p>
-      <p>
-        Before that, I spent my time turning research into working systems: LLM agents for legal
-        translation at Alexa Translations, and real-time video understanding at AwakeAI, a
-        Mila-incubated startup. I studied artificial intelligence at Mila and the Université de
-        Montréal, and computer science at the University of Namur.
-      </p>
-    </div>
+  <div class="bio">
+    <p>I work on AI safety at <a href="https://lawzero.org">LawZero</a>, the nonprofit founded by Yoshua Bengio, where we are building <em>Scientist AI</em>: a non-agentic system that aims to understand and explain the world rather than act in it, meant to serve as a trustworthy guardrail for more autonomous AI.</p>
+    <p>Before that, I turned research into production systems at Alexa Translations and AwakeAI, after studying artificial intelligence at Mila and the Université de Montréal.</p>
+  </div>
 
-    <details>
-      <summary><span class="label">Publications<span class="count">3</span></span><span class="toggle" aria-hidden="true"></span></summary>
-      <ol>
-        <li>
-          <div class="title"><a href="https://arxiv.org/abs/2606.29657">Safety from Honesty in a Disinterested AI Predictor</a></div>
-          <div class="meta">Y. Bengio, O. Richardson, T. Gavenčiak, M. Cohen, …, <b>A. Kamanda</b>, A. Oberman, …, J. Ghosn<span class="venue">arXiv preprint, 2026</span></div>
-        </li>
-        <li>
-          <div class="title"><a href="https://arxiv.org/abs/2605.08496">Latent Personality Alignment: Improving Harmlessness Without Mentioning Harms</a></div>
-          <div class="meta">L. Le, D. Williams-King, M. A. Merzouk, <b>A. Kamanda</b>, A. Oberman<span class="venue">ICLR 2026 Workshop · <a href="https://openreview.net/attachment?id=edIAABRLWE&amp;name=pdf">OpenReview</a></span></div>
-        </li>
-        <li>
-          <div class="title"><a href="https://arxiv.org/abs/2403.09032">CodeUltraFeedback: An LLM-as-a-Judge Dataset for Aligning LLMs to Coding Preferences</a></div>
-          <div class="meta">M. Weyssow, <b>A. Kamanda</b>, X. Zhou, H. Sahraoui<span class="venue">ACM, 2026 · <a href="https://dl.acm.org/doi/full/10.1145/3736407">ACM</a></span></div>
-        </li>
-      </ol>
-    </details>
+  <details class="pubs">
+    <summary><span>Publications</span><i aria-hidden="true"></i></summary>
+    <ol>
+      <li><a href="https://arxiv.org/abs/2606.29657">Safety from Honesty in a Disinterested AI Predictor</a><div class="meta">Y. Bengio, O. Richardson, T. Gavenčiak, M. Cohen, …, <b>A. Kamanda</b>, A. Oberman, …, J. Ghosn · arXiv 2026</div></li>
+      <li><a href="https://arxiv.org/abs/2605.08496">Latent Personality Alignment: Improving Harmlessness Without Mentioning Harms</a><div class="meta">L. Le, D. Williams-King, M. A. Merzouk, <b>A. Kamanda</b>, A. Oberman · ICLR 2026 Workshop</div></li>
+      <li><a href="https://arxiv.org/abs/2403.09032">CodeUltraFeedback: An LLM-as-a-Judge Dataset for Aligning LLMs to Coding Preferences</a><div class="meta">M. Weyssow, <b>A. Kamanda</b>, X. Zhou, H. Sahraoui · ACM 2026</div></li>
+    </ol>
+  </details>
 
-    <nav>
-      <a href="mailto:atonkamanda@hotmail.com">Email</a>
-      <a href="https://github.com/atonkamanda">GitHub</a>
-      <a href="https://x.com/AtonKamanda">X</a>
-      <a href="https://www.linkedin.com/in/aton-kamanda-97388a160">LinkedIn</a>
-      <a href="cv.pdf">CV</a>
-    </nav>
-  </main>
+  <h2>Contact</h2>
+  <nav class="links">
+    <a href="mailto:atonkamanda@hotmail.com">Email</a>
+    <a href="https://github.com/atonkamanda">GitHub</a>
+    <a href="https://x.com/AtonKamanda">X</a>
+    <a href="https://www.linkedin.com/in/aton-kamanda-97388a160">LinkedIn</a>
+  </nav>
+</main>
 </body>
 </html>
